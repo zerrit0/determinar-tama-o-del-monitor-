@@ -1,0 +1,106 @@
+:root {
+    --fondo: #8591ac;
+    --fondo-2: #45547e;
+    --papel: #fbfaf6;
+    --tinta: #783e92;
+    --tinta-suave: #5b6478;
+    --acento: #6d2469;
+    --acento-oscuro: #0b7f71;
+    --borde: #d9dce4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    background: radial-gradient(circle at 20% 15%, var(--fondo-2), var(--fondo) 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    background-color: var(--papel);
+    padding: 36px 32px;
+    border-radius: 20px;
+    border-top: 6px solid var(--acento);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+}
+
+h1 {
+    color: var(--tinta);
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    margin: 18px 0 14px;
+    border: 2px solid var(--borde);
+    border-radius: 10px;
+    background: white;
+    color: var(--tinta);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: var(--tinta-suave);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--acento);
+    box-shadow: 0 0 0 4px rgba(15, 165, 147, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--acento);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--acento-oscuro);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--tinta);
+    outline-offset: 2px;
+}
+
+#resultado {
+    margin-top: 24px;
+    padding: 16px;
+    min-height: 1.5em;
+    border-radius: 10px;
+    background: #eef7f5;
+    color: var(--tinta);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+#resultado:empty {
+    display: none;
+}
